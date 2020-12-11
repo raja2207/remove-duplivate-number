@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Remove Duplicate Array</title>
+</head>
+<body>
+    <script>
+        let sum=[2,3,5,1,6,7,3,6,1];
+        let output=[];
+        let i;
+        for(i=0; i<sum.length; i++){
+            if(output.indexOf(sum[i]) === -1){
+                output.push(sum[i]);
+            }
+        }
+        console.log(sum);
+        console.log(output);
+    </script>
+    <script>
+        let details=[
+            {sno:1,name:"rajesh",adress:"pudhuchery",phoneno:9445437748},
+            {sno:2,name:"raja",adress:"pudhuchery1",phoneno:9445437749},
+            {sno:3,name:"balu",adress:"srk",phoneno:9445444748},
+            {sno:4,name:"babu",adress:"srk1",phoneno:9445477748},
+            {sno:5,name:"dinesh",adress:"srk2",phoneno:9449437748},
+            {sno:6,name:"vamsi",adress:"rlp",phoneno:9445407748},
+            {sno:7,name:"dhasa",adress:"pudhuchery3",phoneno:9444437748},
+            {sno:8,name:"lika",adress:"pudhuchery4",phoneno:9445337748},
+            {sno:9,name:"yuvaraj",adress:"srk3",phoneno:944543728},
+            {sno:10,name:"krishna",adress:"pudhuchery5",phoneno:9545437748},
+            {sno:11,name:"vijay",adress:"pudhuchery6",phoneno:9447437748},
+            {sno:12,name:"rajeshv",adress:"pudhuchery7",phoneno:9245437748},
+            {sno:13,name:"sekar",adress:"rlp1",phoneno:9445437748},
+            {sno:14,name:"kumaran",adress:"pudhuchery8",phoneno:9045437748},
+            {sno:15,name:"naresh",adress:"pudhuchery9",phoneno:9405437748},
+            {sno:16,name:"gaja",adress:"pudhuchery10",phoneno:9446437748},
+
+        ];
+        
+        function myfun(data,key){
+            return[
+                ...new Map(data.map(x => [key(x),x])).values()
+            ]
+
+        }
+        console.log(JSON.stringify(myfun(details,it=>it.phoneno)));
+            
+      
+
+
+    </script>
+</body>
+</html>
